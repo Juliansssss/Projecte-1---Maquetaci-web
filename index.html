@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Navegación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Columna lateral */
+    .menu-lateral {
+      width: 200px;
+      background-color: #fcfcfc;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    .menu-lateral .logo {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .menu-lateral .logo .opciones{
+        text-align: center;
+    }
+    .menu-lateral a {
+      display: block;
+      color: #000000;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+    .menu-lateral a:hover {
+      background-color: #0051ff;
+      color: white;
+    }
+
+    /* Contenedor principal */
+    .contenedor-principal {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* Menú superior */
+    .menu-superior {
+      background-color: #fdfdfd;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-superior .izquierda,
+    .menu-superior .derecha {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Espacio entre los elementos */
+    }
+
+    .menu-superior a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+    .menu-superior a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contenido principal */
+    .contenido {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #F5F6FA;
+    }
+
+    /* Estilos adicionales para la imagen de notificaciones */
+    .notificaciones {
+      width: 24px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Columna lateral -->
+  <aside class="menu-lateral">
+    <div class="logo"><span>Dash</span>Stack</div>
+    <div class="opciones">
+    <a href="#opcion1">Dashboard</a>
+    <a href="#opcion2">Products</a>
+    <a href="#opcion3">Favorites</a>
+    </div>
+  </aside>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor-principal">
+    
+    <!-- Menú superior -->
+    <div class="menu-superior">
+      <div class="izquierda">
+        <a href="#inicio"><img src="" alt="">---</a>
+        <input type="text" id="searchInput" placeholder="Search" />
+      </div>
+      <div class="derecha">
+        <img src="img/icon.png" alt="Notificaciones" class="notificaciones">
+        <select name="idioma" id="idioma">
+          <option value="Ingles">English</option>
+          <option value="Español">Español</option>
+        </select>
+        <a href="#User">User</a>
+        
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="contenido">
+      <h1>Dashboard</h1>
+      <p>Este es el contenido principal de la página.</p>
+    </main>
+  </div>
+</body>
+</html>
